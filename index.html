@@ -8,28 +8,34 @@
 </head>
 <body>
 
+    <div class="lang-switcher">
+    <button onclick="loadLanguage('en')">EN</button>
+    <button onclick="loadLanguage('fr')">FR</button>
+    <button onclick="loadLanguage('it')">IT</button>
+    </div>
+
   <header>
-    <h1>Anna Cazeneuve</h1>
-    <p>Do it all-ist</p>
+    <h1 data-i18n="title">Anna Cazeneuve</h1>
+    <p data-i18n="subtitle">Do it all-ist</p>
     <nav>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#work" data-i18n="nav.work"></a>
+      <a href="#about" data-i18n="nav.about"></a>
+      <a href="#contact" data-i18n="nav.contact"></a>
     </nav>
   </header>
 
   <section id="work">
-    <h2>Work</h2>
+    <h2 data-i18n="nav.work"></h2>
     <!-- Add project cards here -->
   </section>
 
   <section id="about">
-    <h2>About</h2>
+    <h2 data-i18n="nav.about"></h2>
     <p>Brief bio here.</p>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
+    <h2 data-i18n="nav.contact"></h2>
     <a href="mailto:annacazeneuve@gmail.com">annacazeneuve@gmail.com</a>
   </section>
 
