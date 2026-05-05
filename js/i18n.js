@@ -1,6 +1,6 @@
 let translations = {};
 
-async function loadTranslations(lang) {
+async function loadLanguages(lang) {
     const response = await fetch(`locales/${lang}.json`);
     translations = await response.json();
     document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -20,4 +20,4 @@ const initialLang = supportedLangs.includes(savedLang) ? savedLang
                   : supportedLangs.includes(browserLang) ? browserLang 
                   : 'en';
 
-loadTranslations(initialLang);
+loadLanguages(initialLang);
