@@ -1,14 +1,14 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #f9f9f7;
-  --text: #111;
-  --accent: #0057ff;
+  --bg:     #f5f4f2;
+  --text: #222;
+  --accent: #b84709;
   --max-width: 800px;
 }
 
 body {
-  font-family: Georgia, serif;
+  font-family: "Andale Mono", monospace;
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
@@ -20,8 +20,40 @@ header, section {
   margin: 0 auto 4rem;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+h1 { font-size: 2.5rem;
+     font-family: "Andale Mono", monospace;
+     margin-bottom: 0.5rem; }
+
+h2 { font-size: 1.5rem;
+     width: fit-content;
+     margin-bottom: 1rem;
+     margin-left: -0.25rem;
+     padding: 0.25rem 0.5rem;
+     border: 2px solid var(--accent);}
+
+.lang-switcher {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border: 1px solid var(--accent);
+  padding: 0.4rem;
+  background: var(--bg);
+  z-index: 100;
+}
+
+.lang-switcher button {
+  font-family: "Andale Mono", monospace;
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+a { color: var(--accent); text-decoration: none; }
 
 nav a {
   margin-right: 1.5rem;
